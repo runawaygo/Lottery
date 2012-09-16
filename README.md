@@ -4,6 +4,7 @@
 hello.
 
 ### Contributors ###
-runawaygo
-hax
+
+* runawaygo
+* hax
 
