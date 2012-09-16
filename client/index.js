@@ -1,5 +1,5 @@
 seajs.config({
-	base: 'http://127.0.0.1:8000/client/',
+	base: '/client/',
 	debug:true,
 	alias: {
 		'coffee': 'lib/coffee-script',
@@ -21,9 +21,4 @@ define(function(require) {
 	console.log('begin');
 	require('css/index.css');
 	require('index.coffee');	
-	// var Constellation = require('./logic/constellation.coffee');
-	// 
-	// var dd =new Constellation.Constellation();
-	// 
-	// console.log(dd);
 });
