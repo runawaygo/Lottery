@@ -79,12 +79,21 @@ app.get('/comment',function(req,res){
 	});
 });
 
+var lt = require('./lottery')
 var data = require('./fake')
 app.get('/test/:id', function(req, res){
-	if (Date.now() > data.time) {
-		res.render('test', {users:data.users})
-	} else {
-	}
+	var users = data.users.map(function(u){
+		u.secret = lt.secret(u.userId, u.userNumber, u.salt)
+		return u
+	})
+	var result = users.reduce(function(a, b){
+		console.log(a.userNumber, b.userNumber)
+		return {userNumber: a.userNumber + b.userNumber}
+	}, {userNumber:0}).userNumber % data.users.length
+
+	console.log(result)
+
+	res.render('test', {users: users, state: data.time < Date.now() ? 'published' : '', luckyUser: data.users[result] })
 })
 
 var port = process.env.PORT || 8000;
