@@ -19,6 +19,6 @@ seajs.config({
 
 define(function(require) {
 	console.log('begin');
-	require('css/index.css');
+	require('css/index.less');
 	require('index.coffee');	
 });
