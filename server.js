@@ -45,7 +45,7 @@ app.get('/callback',function(req,res){
 	);
 });
 
-app.get('/weibo',function(req,res){
+app.get('/public_timeline',function(req,res){
 	var accessToken = req.cookies['accessToken'];
 	var weibo = new SinaWeibo(clientId, clientSecret, accessToken);
 	weibo.GET('statuses/public_timeline',{}, function (err, resultInJson, response) {
@@ -55,28 +55,27 @@ app.get('/weibo',function(req,res){
 	});
 });
 
-app.get('/comment',function(req,res){
+app.get('/user_timeline',function(req,res){
 	var accessToken = req.cookies['accessToken'];
-	var weiboId = req.query['weiboId'];
 	var weibo = new SinaWeibo(clientId, clientSecret, accessToken);
-	weibo.GET('comments/show',{id:weiboId}, function (err, resultInJson, response) {
+	weibo.GET('statuses/user_timeline',{}, function (err, resultInJson, response) {
 	    if (err) return callback(err);
 	    // do something with resultInJson
 	    res.end(JSON.stringify(resultInJson));
 	});
-});
-
+})
 
 app.get('/comment',function(req,res){
 	var accessToken = req.cookies['accessToken'];
 	var weiboId = req.query['weiboId'];
 	var weibo = new SinaWeibo(clientId, clientSecret, accessToken);
 	weibo.GET('comments/show',{id:weiboId}, function (err, resultInJson, response) {
-	    if (err) return callback(err);
+	    if (err) return console.log(err);
 	    // do something with resultInJson
 	    res.end(JSON.stringify(resultInJson));
 	});
 });
+
 
 app.get('/event/:id', function(req, res){
 	res.render('test')

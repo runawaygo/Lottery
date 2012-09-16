@@ -16,7 +16,6 @@ seajs.config({
   preload: ['plugin-coffee', 'plugin-less']
 });
 
-
 define(function(require) {
 	console.log('begin');
 	require('css/index.less');

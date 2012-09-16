@@ -12,32 +12,18 @@
 		<div class="topbar">
 	    	<div class="fill">
 	        	<div class="container-fluid">
-	          		<a class="brand" href="#">微博杀</a>
-	          		<ul class="nav">
-	            		<li class="active"><a href="#">主战场	</a></li>
-	            		<li><a href="#about">宿敌</a></li>
-	            		<li><a href="#contact">排行榜</a></li>
-						<li><input type='search' style="margin-top:5px;margin-left:20px;"></li>
-						<li class="dropdown pull-right" data-dropdown="dropdown" >
-						    <a href="#" class="dropdown-toggle">所有星座</a>
-						    <ul class="dropdown-menu">
-						      	<li><a href="#">所有星座</a></li>							
-								<li class="divider"></li>
-						      	<li><a href="#">天蝎座</a></li>
-						      	<li><a href="#">天蝎座</a></li>						
-						      	<li><a href="#">天蝎座</a></li>
-						      	<li><a href="#">天蝎座</a></li>
-						    </ul>
-						</li>
-	          		</ul>
-	          		<p class="pull-right"><a href="#"><strong>青山老妖</strong></a></p>
+	          		<a class="brand" href="#">Bollery</a>
+	          		<p class="pull-right"><a href="#"><strong>(user.point+...+user.point) * 100 % users.count = lucky number</strong></a></p>
 					
 	        	</div>
 	      	</div>
 	    </div>
+		<div id="weibos-container">
+			<div id="roll" class='button kill glass-card'>Roll Up</div>
+		</div>
 		<div id="persons-container">
 		</div>
-		<div id='person-detail-container' class='normal-person-container  glass-card'>
+		<!-- <div id='person-detail-container' class='normal-person-container  glass-card'>
 				<button class='button kill rightTop' style="margin:6px;">杀</button>
 	         	<img class='headicon' src='/client/img/1.jpeg'>
 	         	<h2>
@@ -107,7 +93,7 @@
 						<span>3/7</span>
 					</div>
 				</div>
-		</div>
+		</div> -->
 		<script id="personTemplate" type="text/x-jquery-tmpl">
 			<section class='person'>
 				<div class='content-container'>
@@ -121,18 +107,24 @@
 						<span>120</span>
 					</div>
 					<div class="constellation-panel" 　 data-placement="left" rel='twipsy' title='白羊座'>
-						<img src="/client/img/constellation/Aries-14.png" style="margin:3px;" />						
+						${number}
 					</div>
-				</div>
-				<div class='person-info-panel'>
-					<div>白羊座 - 祈祷</div>
-					<div>能力: 100</div>
-					<div>生命值: 100</div>
-					<div>攻击力: 100</div>										
 				</div>
 	        </section>
 	    </script>
-
+		<script id="weiboTemplate" type="text/x-jquery-tmpl">
+			<section class='weibo'>
+				<div class='content-container'>
+	        <div>
+	            <img class='headicon' src='${user.profile_image_url}'>
+	            <div class='name min'>
+	                <strong>${text}</strong>
+	            </div>
+	     		</div>
+	     		<div id='weibo_id' style="display:none;">{id}</div>
+				</div>
+	    </section>
+	  </script>
 		<script src="/client/lib/less.js"></script>
 		<script src="/client/lib/json2.js"></script>
 		<script src="/client/lib/underscore-1.1.6.js"></script>
