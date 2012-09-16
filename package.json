@@ -1,10 +1,11 @@
 {
-  "name": "node-todo-example",
-  "version": "0.0.1",
-  "dependencies": {
-		"express":"",
-		"oauth":"0.9.5",
-		"node-sina-weibo":""
-
-  }
+	"name": "letou",
+	"version": "0.0.1",
+	"main": "./server.js",
+	"dependencies": {
+		"express": "",
+		"oauth": "0.9.5",
+		"node-sina-weibo": "",
+		"mongoskin": ""
+	}
 }

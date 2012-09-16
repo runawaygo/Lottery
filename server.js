@@ -1,3 +1,4 @@
+//var db = require('./config').db;
 var express = require('express'),
 	app = express();
 
@@ -77,6 +78,9 @@ app.get('/comment',function(req,res){
 	});
 });
 
+app.get('/event/:id', function(req, res){
+	res.render('test')
+})
 
 var port = process.env.PORT || 8000;
 console.log("service run on " + port);
