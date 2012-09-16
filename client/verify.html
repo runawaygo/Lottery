@@ -1,0 +1,44 @@
+<!doctype>
+
+<head>
+<script src="lib/CryptoJS/rollups/sha1.js"></script>
+
+</head>
+
+
+<script>
+function calc(f){
+	var s = f['userId'].value + ':' +
+		f['userNumber'].value + ':' +
+		f['verifyCode'].value
+
+	f['result'].value = CryptoJS.SHA1(s)
+
+	return false
+}
+</script>
+
+<form id="myForm" onsubmit="calc(this); return false">
+<p>
+<input name="userId" value="johnhax@gmail.com">
+<input name="userNumber" value="">
+<input name="verifyCode" value="">
+<input type="submit">
+<p>Expect: <output name="secret"></output>
+<p>Actual: <output name="result"></output>
+
+<script>
+void function(){
+var f = document.getElementById('myForm')
+var a = location.search.slice(1).split('&')
+for (var i = 0; i < a.length; i++) {
+
+	var x = a[i].split('=')
+	//console.log(x)
+	//console.log(f.elements[x[0]])
+	f.elements[x[0]].value = decodeURIComponent(x[1])
+}
+}()
+</script>
+
+</form>

@@ -16,6 +16,7 @@ app.use(express.bodyParser());
 app.use(express.cookieParser());
 app.use(express.session({ secret: 'superwolf' }));
 app.use(app.router);
+app.set('view engine', 'jade')
 
 
 app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
@@ -76,9 +77,21 @@ app.get('/comment',function(req,res){
 	});
 });
 
+var lt = require('./lottery')
+var data = require('./fake')
+app.get('/test/:id', function(req, res){
+	var users = data.users.map(function(u){
+		u.secret = lt.secret(u.userId, u.userNumber, u.salt)
+		return u
+	})
+	var result = users.reduce(function(a, b){
+		console.log(a.userNumber, b.userNumber)
+		return {userNumber: a.userNumber + b.userNumber}
+	}, {userNumber:0}).userNumber % data.users.length
 
-app.get('/event/:id', function(req, res){
-	res.render('test')
+	console.log(result)
+
+	res.render('test', {users: users, state: data.time < Date.now() ? 'published' : '', luckyUser: data.users[result] })
 })
 
 var port = process.env.PORT || 8000;

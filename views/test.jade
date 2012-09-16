@@ -1,0 +1,42 @@
+html
+	head
+		style
+			.userNumber, .lucky {
+				color: white
+			}
+			.published .userNumber, .published .lucky {
+				color: black
+			}
+
+	body(
+		class=state
+	)
+		p
+			| The lucky guy is:
+			span.lucky
+				=luckyUser.userId
+		ul
+			each u in users
+				li
+					dl
+						dt
+							| User ID:
+						dd
+							=u.userId
+						dt.userNumber
+							| User given number:
+						dd.userNumber
+							=u.userNumber
+						dt
+							| Verify code:
+						dd
+							=u.salt
+						dt
+							| Secret
+						dd
+							=u.secret.digest
+					form(action='/client/verify.html')
+						input(type='hidden', name='userId', value=u.userId)
+						input(type='hidden', name='verifyCode', value=u.salt)
+						input(type='hidden', name='secret', value=u.secret.digest)
+						input(type='submit', value='Verify it!')
