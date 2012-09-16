@@ -11,8 +11,9 @@ function randomInteger(min, max) {
 	return Math.floor(Math.random() * (max - min) + min)
 }
 
-function randomString() {
-	return Math.random().toString(36).slice(2, 7)
+function randomString(len) {
+	if (!(len >= 1)) len = 1
+	return Math.random().toString(36).slice(2, len + 2)
 }
 
 function secret(userId, userNumber, salt) {
