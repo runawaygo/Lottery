@@ -13,7 +13,6 @@ function callbackWithError(callback){
 }
 
 exports.createLottery = function(lottery, callback){
-	lottery.seeds = [];
 	lotteries.insert(lottery, callbackWithError(callback));
 };
 exports.getLottery = function(weiboId, callback){
