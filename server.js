@@ -8,9 +8,11 @@ app.use(express.session({ secret: 'bang590' }));
 app.use(app.router);
 
 app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
-app.use('/client',express.static(__dirname + '/client',{ cache:false}));
+app.use('/',express.static(__dirname + '/',{ cache:false}));
+
 
 var port = process.env.PORT || 8000;
 console.log("service run on " + port);
 
 app.listen(port);
+
