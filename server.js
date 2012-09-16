@@ -81,8 +81,10 @@ app.get('/comment',function(req,res){
 
 var data = require('./fake')
 app.get('/test/:id', function(req, res){
-	if (Date.now() > data.) {
-	res.render('test', {users:.users})
+	if (Date.now() > data.time) {
+		res.render('test', {users:.users})
+	} else {
+	}
 })
 
 var port = process.env.PORT || 8000;
