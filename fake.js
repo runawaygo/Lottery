@@ -11,4 +11,6 @@ for (var i = 0; i < User_Count; i++) {
 	}
 }
 
+exports.weiboId = lt.randomInteger(100000)
+exports.time = Date.now() + 60 * 1000
 exports.users = users
