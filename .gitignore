@@ -1,5 +1,6 @@
 .naeindex
 *.log
+node_modules
 
 #################
 ## Eclipse
