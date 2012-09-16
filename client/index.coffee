@@ -1,5 +1,6 @@
 define (require, exports) ->
 	require('./FollowingData')
+
 	$(->	
 		persons = JSON.parse(window.data)
 		$("#personTemplate").tmpl(persons[0...24]).appendTo("#persons-container")
@@ -8,9 +9,9 @@ define (require, exports) ->
 			.each (index)->
 				$(this).css { left: parseInt(index / 4) * 80 + 'px', top: index % 4 * 125 + 'px' }
 
-
-
-		$.getJSON('/friends',(data)->
+		$.getJSON('/weibo',(data)->
+			console.log('superwolf')
 			console.log(data);
-		)			
+		)
+		vars = getUrlVars()
 	)
