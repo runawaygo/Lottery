@@ -1,0 +1,423 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Harmony</title>
+		<meta charset="utf-8"/>
+		<meta name="description" content="Procedural Drawing Tool"/>
+		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+		<link rel="stylesheet" href="/client/css/s.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<link rel="stylesheet" href="/client/css/bootstrap.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	</head>
+	<body>
+		<div class="topbar">
+	    	<div class="fill">
+	        	<div class="container-fluid">
+	          		<a class="brand" href="#">微博杀</a>
+	          		<ul class="nav">
+	            		<li class="active"><a href="#">主战场	</a></li>
+	            		<li><a href="#about">宿敌</a></li>
+	            		<li><a href="#contact">排行榜</a></li>
+						<li><input type='search' style="margin-top:5px;margin-left:20px;"></li>
+						<li class="dropdown pull-right" data-dropdown="dropdown" >
+						    <a href="#" class="dropdown-toggle">所有星座</a>
+						    <ul class="dropdown-menu">
+						      	<li><a href="#">所有星座</a></li>							
+								<li class="divider"></li>
+						      	<li><a href="#">天蝎座</a></li>
+						      	<li><a href="#">天蝎座</a></li>						
+						      	<li><a href="#">天蝎座</a></li>
+						      	<li><a href="#">天蝎座</a></li>
+						    </ul>
+						</li>
+	          		</ul>
+	          		<p class="pull-right"><a href="#"><strong>青山老妖</strong></a></p>
+					
+	        	</div>
+	      	</div>
+	    </div>
+		<div id='me-detail-container' class='normal-person-container  glass-card'>
+				<button class='kill-btn kill rightTop' style="margin:6px;">杀</button>
+	         	<img class='headicon' src='/client/img/1.jpeg'>
+	         	<h2>
+	          		<strong>青山老妖</strong>
+	           	</h2>
+				<div class="normal-info-panel" style="margin-top:12px;">
+					<div class='ability-row'>
+						<div class="info-item"  data-placement="left" rel='twipsy' title='玩家基础能力'>
+							<span>杀气:</span>
+							<span>120</span>
+						</div>
+						<div class='ability-detail-row'>
+							<div class='ability-item'>
+								基础&nbsp;&nbsp;90
+							</div>
+							<div class='ability-item'>
+								好友&nbsp;&nbsp;+20
+							</div>
+							<div class='ability-item'>
+								状态&nbsp;&nbsp;+10
+							</div>
+						</div>
+						<div class="top-line"></div>
+					</div>
+					<div class="info-item"  data-placement="left" rel='twipsy' title='杀气*6'>
+						<span>生命:</span>
+						<span>720</span>
+					</div>
+					<div class="info-item"  data-placement="left" rel='twipsy' title='杀气*0.4'>
+						<span>攻击:</span>
+						<span>48</span>
+					</div>
+					<div class="top-line"></div>
+					<div class="info-item"  data-placement="left" rel='twipsy' title='胜利次数'>
+						<span>胜利:</span>
+						<span>120</span>
+					</div>
+					<div class="info-item"  data-placement="left" rel='twipsy' title='失败次数'>
+						<span>失败:</span>
+						<span>120</span>
+					</div>
+					<div class="info-item"　 data-placement="left" rel='twipsy' title='血 / 血+魄'>
+						<span>胜率:</span>
+						<span>50%</span>
+					</div>
+				</div>
+		</div>
+		<div id='me-reference-container' class='center-container glass-card'>
+			<h2>星座</h2>
+			<div class='constellations-container'>
+				<ul class='fire'>
+					<li>
+						天平座 
+					</li>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+				</ul>
+				<ul class='wind'>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+				</ul>
+				<ul class='fire'>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+				</ul>
+				<ul class='wind'>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div id="pk-btns-panel" class='rightTop'>
+				<button id="begin-btn" class='kill-btn kill'>确定</button>
+				<button id="cancel-btn" class='kill-btn quit'>取消</button>				
+			</div>
+		</div>
+		<div id="persons-container">
+		</div>
+		<div id='person-detail-container' class='normal-person-container  glass-card'>
+				<button class='kill-btn kill rightTop' style="margin:6px;">杀</button>
+	         	<img class='headicon' src='/client/img/1.jpeg'>
+	         	<h2>
+	          		<strong>青山老妖</strong>
+	           	</h2>
+				<div class="pk-info-panel" style="margin-top:12px;">
+					<div class="hp info-item">
+						<span class='hp-current'>200</span>/<span class='hp-limit'>600</span>
+					</div>
+					<div class="info-item">
+						<span>攻击:</span><span>120</span>
+					</div>
+					<div class='info-item'>
+						<span>天平座</span>
+						
+					</div>
+					<div class="info-item skill">
+						<span>致命一击</span>
+						<div class='detail'>
+							致命一击也就是倍击属于物理伤害,所以考虑防御,飘浮的红字部分表示没有计算防御之前的攻击输出,但在多个倍击作用时,红字部分的表述是
+						</div>
+					</div>
+				</div>
+				<div class="normal-info-panel" style="margin-top:12px;">
+					<div class='ability-row'>
+						<div class="info-item"  data-placement="left" rel='twipsy' title='玩家基础能力'>
+							<span>杀气:</span>
+							<span>120</span>
+						</div>
+						<div class='ability-detail-row'>
+							<div class='ability-item'>
+								基础&nbsp;&nbsp;90
+							</div>
+							<div class='ability-item'>
+								好友&nbsp;&nbsp;+20
+							</div>
+							<div class='ability-item'>
+								状态&nbsp;&nbsp;+10
+							</div>
+						</div>
+						<div class="top-line"></div>
+					</div>
+					<div class="info-item"  data-placement="left" rel='twipsy' title='玩家的生命上限,　由玩家的杀气和星座能力决定'>
+						<span>生命:</span>
+						<span>120</span>
+					</div>
+					<div class="info-item"  data-placement="left" rel='twipsy' title='玩家的攻击力,　由玩家的杀气和星座能力决定'>
+						<span>攻击:</span>
+						<span>120</span>
+					</div>
+					<div class="top-line"></div>
+					<div class="info-item"  data-placement="left" rel='twipsy' title='胜利次数'>
+						<span>胜利:</span>
+						<span>120</span>
+					</div>
+					<div class="info-item"  data-placement="left" rel='twipsy' title='失败次数'>
+						<span>失败:</span>
+						<span>120</span>
+					</div>
+					<div class="info-item"　 data-placement="left" rel='twipsy' title='血 / 血+魄'>
+						<span>胜率:</span>
+						<span>50%</span>
+					</div>
+					<div class="top-line"></div>
+					<div class="info-item"　 data-placement="left" rel='twipsy' title='交手7次，胜利3次'>
+						<span>交手:</span>
+						<span>3/7</span>
+					</div>
+				</div>
+		</div>
+		<div id='constellation-detail-container' class='glass-card'>
+			<h1>白羊座</h1>
+			<div class="rightTop glass-card logo">
+				<img src="/client/img/constellation/Aries-16.png" />							
+			</div>
+			<div class="info-item">
+				<div>
+					<strong style="color:white;"> 祈祷</strong>&nbsp;(技能)
+				</div>
+				<div class='detail'>
+					有20%的概率回复100的生命值
+				</div>
+			</div>
+			<div class="info-item">
+				<div style="color:white;">
+					星座能力
+				</div>
+				<div class='detail'>
+					<div>生命:&nbsp;杀气/魅力 * 6</div>
+					<div>攻击力:&nbsp;杀气/魅力 * 0.4</div>
+				</div>
+			</div>
+			<div class="info-item">
+				<div style="color:white;">
+					守护神&nbsp;-&nbsp;牧 
+				</div>
+				<div class='detail'>
+					穆（MU，希腊字母第12字，西亚神话中的月神，中文含意恭敬），穆不仅是白羊座的黄金圣斗士，更是前教皇史昂的爱徒。
+				
+				</div>
+			</div>
+		</div>
+		<div id='me-pk-detail-container' class='pk-person-container glass-card'>
+			<img class='headicon' src='/client/img/1.jpeg'>
+         	<h2>
+          		<strong>青山老妖</strong>
+           	</h2>
+			<div class="pk-info-panel" style="margin-top:12px;">
+				<div class="hp info-item">
+					<span class='hp-current'>200</span>/<span class='hp-limit'>600</span>
+				</div>
+				<div class="info-item attack">
+					<span class='key'>攻击:</span>
+					<span class='value'>120</span>
+				</div>
+				<div class='info-item'>
+					<span class='key'>星座:</span>
+					<span class='value'>天平座</span>
+				</div>
+				<div class="info-item skill">
+					<span class='key'>技能:</span>
+					<span class='value'>致命一击</span>
+					<div class='detail'>
+						致命一击也就是倍击属于物理伤害,所以考虑防御,飘浮的红字部分表示没有计算防御之前的攻击输出。
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id='pk-message-container' class='glass-card'>
+			<h1>PK</h1>
+			<div id='pk-message-panel'>
+				<div class='attack-info-item'>
+					@青山老妖　发动了　天平座技能-致命一击<br/>
+					@雪类不见天日　受到了60点伤害
+				</div>
+				<div class='attack-info-item'>
+					@青山老妖　发动了　天平座技能-致命一击<br/>
+					@雪类不见天日　受到了60点伤害
+				</div>
+				<div class='attack-info-item'>
+					@青山老妖　发动了　天平座技能-致命一击<br/>
+					@雪类不见天日　受到了60点伤害
+				</div>
+			</div>
+			<div id="pk-btns-panel" class='rightTop'>
+				<button id="begin-btn" class='kill-btn kill'>杀</button>
+				<button id="cancel-btn" class='kill-btn quit'>退</button>				
+			</div>
+			
+		</div>
+
+		<div id='footbar' class='glass-card'>
+			<div class='constellations-container'>
+				<ul class='fire'>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+				</ul>
+				<ul class='wind'>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+				</ul>
+				<ul class='fire'>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+				</ul>
+				<ul class='wind'>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+					<li>
+						<div>
+							<img src="/client/img/constellation/Aries-16.png" />						
+						</div>
+					</li>
+				</ul>				
+			</div>
+		</div>
+		<script id="personTemplate" type="text/x-jquery-tmpl">
+			<section class='person'>
+				<div class='content-container'>
+		            <div>
+		                <img class='headicon' src='${profile_image_url}'>
+		                <div class='name min'>
+		                    <strong>${screen_name}</strong>
+		                </div>
+	           		</div>
+					<div class="ability-panel" >
+						<span>120</span>
+					</div>
+					<div class="constellation-panel" 　 data-placement="left" rel='twipsy' title='白羊座'>
+						<img src="/client/img/constellation/Aries-14.png" style="margin:3px;" />						
+					</div>
+				</div>
+				<div class='person-info-panel'>
+					<div>白羊座 - 祈祷</div>
+					<div>能力: 100</div>
+					<div>生命值: 100</div>
+					<div>攻击力: 100</div>										
+				</div>
+	        </section>
+	    </script>
+		// <script src="/client/lib/less.js"></script>
+		<script src="/client/lib/json2.js"></script>
+		<script src="/client/lib/underscore-1.1.6.js"></script>
+		<script src="/client/lib/backbone.js"></script>
+		<script src="/client/lib/jquery-1.6.2.min.js"></script>				
+		<script src="/client/lib/jquery.tmpl.js"></script>		
+		<script src="/client/lib/jquery-ui-1.8.16.custom.min.js"></script>
+		<script src="/client/lib/bootstrap/bootstrap-modal.js"></script>
+		<script src="/client/lib/bootstrap/bootstrap-twipsy.js"></script>										
+		<script src="/client/lib/coffee-script.js"></script>
+		<script src="/client/lib/sea.js" data-main="./index"></script>
+	</body>
+</html>

@@ -1,0 +1,435 @@
+body {
+  background: -webkit-radial-gradient(#000000 15%, transparent 16%) 0 0, -webkit-radial-gradient(#000000 15%, transparent 16%) 8px 8px, -webkit-radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 0 1px, -webkit-radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 8px 9px;
+  background: -moz-radial-gradient(#000000 15%, transparent 16%) 0 0, -moz-radial-gradient(#000000 15%, transparent 16%) 8px 8px, -moz-radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 0 1px, -moz-radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 8px 9px;
+  background-color: #282828;
+  background-size: 16px 16px;
+}
+.Aries-label {
+  background-image: url('/client/img/constellation/Aries-14.png');
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}
+.center-container {
+  position: absolute;
+  left: 310px;
+  right: 310px;
+  margin-top: 52px;
+}
+#me-reference-container {
+  background: rgba(16, 16, 16, 0.5);
+}
+#me-detail-container {
+  background: rgba(0, 112, 128, 0.25);
+  left: 100px;
+  width: 180px;
+}
+#me-detail-container span {
+  display: inline-block;
+}
+.rightBottom {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+.rightTop {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.leftTop {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.leftBottom {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+.person {
+  color: #ddd;
+  position: absolute;
+  width: 64px;
+  font-size: 14px;
+  line-height: 16px;
+  min-height: 80px;
+  background: #078;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  vertical-align: top;
+}
+.person .content-container {
+  padding: 7px;
+}
+.person .content-container .ability-panel {
+  display: none;
+  right: 0px;
+  bottom: 0px;
+  color: #333;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-border-top-left-radius: 8px;
+  -moz-border-radius-topleft: 8px;
+  border-top-left-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.person .content-container .constellation-panel {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  color: #333;
+  font-size: 12px;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  border-bottom-left-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.person .content-container .constellation-panel1 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  border-top-left-radius: 5px;
+  background-image: -webkit-linear-gradient(45deg, transparent, transparent 20px, rgba(255, 255, 255, 0.8) 20px, rgba(255, 255, 255, 0.8) 30px);
+  background-image: -moz-linear-gradient(45deg, transparent, transparent 20px, rgba(255, 255, 255, 0.8) 20px, rgba(255, 255, 255, 0.8) 30px);
+}
+.person .content-container .headicon {
+  -moz-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+.person .person-info-panel {
+  display: none;
+  padding: 5px;
+  position: absolute;
+  left: -111px;
+  bottom: 0px;
+  width: 100px;
+  background: #fc3;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.person:hover {
+  background: #fc3;
+  color: #333;
+  z-index: 100;
+  -moz-transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+  -moz-box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.2);
+}
+.person:hover .person-info-panel {
+  display: none;
+}
+#persons-container {
+  margin-top: 52px;
+  margin-left: 100px;
+  position: absolute;
+}
+.glass-card {
+  font-size: 16px;
+  color: #ddd;
+  padding: 7px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+}
+.middle-line {
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+.top-line {
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  margin: 18px;
+}
+.pk-person-container,
+.normal-person-container {
+  width: 180px;
+  position: absolute;
+  margin-top: 52px;
+}
+.pk-person-container h2,
+.normal-person-container h2 {
+  text-align: center;
+  color: #ddd;
+}
+.normal-person-container .normal-info-panel .ability-row {
+  position: relative;
+  color: #bbb;
+}
+.normal-person-container .normal-info-panel .ability-row .ability-detail-row {
+  margin-top: 5px;
+  margin-left: 10px;
+  display: none;
+}
+.normal-person-container .normal-info-panel .ability-row .ability-detail-row .ability-item {
+  display: inline-block;
+  width: 80px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.normal-person-container .normal-info-panel .ability-row .ability-detail-row .ability-item:hover {
+  color: white;
+  text-decoration: underline;
+}
+.normal-person-container .normal-info-panel .ability-row:hover .info-item span:first-child {
+  color: white;
+}
+.normal-person-container .normal-info-panel .ability-row:hover .ability-detail-row {
+  display: block;
+}
+.normal-person-container .normal-info-panel .info-item {
+  cursor: pointer;
+  margin-top: 8px;
+  line-height: 18px;
+  font-size: 18px;
+}
+.normal-person-container .normal-info-panel .info-item span {
+  border-bottom: 1px solid transparent;
+}
+.normal-person-container .normal-info-panel .info-item span:first-child {
+  font-size: 16px;
+  display: inline-block;
+  width: 45px;
+  text-align: right;
+  color: #bbb;
+}
+.normal-person-container .normal-info-panel .info-item span:last-child {
+  margin-left: 40px;
+  display: inline-block;
+  text-align: left;
+  color: white;
+}
+.normal-person-container .normal-info-panel .info-item:hover span:first-child {
+  color: white;
+}
+.normal-person-container .normal-info-panel .info-item:hover span:last-child {
+  border-bottom: 1px solid white;
+}
+.pk-person-container {
+  color: white;
+}
+.pk-person-container .pk-info-panel .info-item {
+  line-height: 24px;
+  font-size: 18px;
+  margin: 5px;
+}
+.pk-person-container .pk-info-panel .info-item .detail {
+  color: #bbb;
+  display: block;
+  margin-top: 5px;
+  line-height: 20px;
+  font-size: 14px;
+}
+.pk-person-container .pk-info-panel .info-item span.key {
+  font-size: 16px;
+  color: #bbb;
+}
+.pk-person-container .pk-info-panel .info-item span.value {
+  margin-left: 20px;
+}
+.pk-person-container .pk-info-panel .info-item:hover .detail {
+  display: block;
+}
+.pk-person-container .pk-info-panel .skill {
+  cursor: pointer;
+}
+.pk-person-container .pk-info-panel .hp {
+  margin-left: 0px;
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  line-height: 36px;
+  background: rgba(0, 0, 0, 0.8);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+#pk-message-container {
+  position: absolute;
+  margin-top: 52px;
+  background: rgba(64, 64, 64, 0.1);
+}
+#pk-message-container h1 {
+  color: #ddd;
+  text-align: center;
+}
+#pk-message-container #pk-message-panel {
+  font-size: 18px;
+  padding: 15px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#pk-message-container #pk-message-panel .attack-info-item {
+  padding-bottom: 20px;
+}
+#pk-message-container #pk-btns-panel {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+#person-detail-container {
+  right: 310px;
+  background: rgba(0, 112, 128, 0.25);
+}
+#person-detail-container .pk-info-panel {
+  display: none;
+}
+#person-detail-container .normal-info-panel {
+  display: block;
+}
+#person-detail-container.normal-person-container .pk-info-panel {
+  display: none;
+}
+#person-detail-container.normal-person-container .normal-info-panel {
+  display: block;
+}
+#person-detail-container.pk-person-container .pk-info-panel {
+  display: block;
+}
+#person-detail-container.pk-person-container .normal-info-panel {
+  display: none;
+}
+#constellation-detail-container {
+  font-size: 18px;
+  right: 100px;
+  width: 180px;
+  position: absolute;
+  margin-top: 52px;
+  background: rgba(0, 112, 128, 0.25);
+}
+#constellation-detail-container h1 {
+  color: white;
+}
+#constellation-detail-container .logo {
+  padding: 5px;
+  margin: 11px;
+  background: rgba(255, 255, 255, 0.6);
+}
+#constellation-detail-container .info-item {
+  margin-top: 10px;
+  padding-bottom: 20px;
+  color: #bbb;
+}
+#constellation-detail-container .info-item .detail {
+  margin-top: 5px;
+  font-size: 16px;
+}
+#constellation-detail-container .info-item light {
+  color: #ddd;
+}
+#me-pk-detail-container {
+  background: rgba(128, 0, 32, 0.25);
+}
+.shadow {
+  -moz-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+#search,
+#resultPanel {
+  float: right;
+}
+#footbar {
+  padding: 0px;
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  height: 33px;
+}
+#footbar .constellations-container {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.constellations-container ul.fire li:hover {
+  background: rgba(255, 0, 0, 0.5);
+}
+.constellations-container ul.wind li:hover {
+  background: rgba(0, 192, 0, 0.5);
+}
+.constellations-container ul {
+  float: left;
+  display: block;
+  margin: 0px;
+  height: 100%;
+  width: 25%;
+  position: relative;
+}
+.constellations-container ul li {
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: auto;
+  display: block;
+  float: left;
+  position: relative;
+  width: 33%;
+}
+.constellations-container ul li div {
+  width: 23px;
+  height: 23px;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.constellations-container ul li div img {
+  width: 100%;
+  height: 100%;
+}
+.kill-btn {
+  font-size: 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  color: white;
+  line-height: normal;
+  -moz-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  font-weight: bolder;
+}
+.kill-btn.kill {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+.kill-btn.kill:hover {
+  background-color: rgba(255, 0, 0, 0.8);
+}
+.kill-btn.quit {
+  background-color: rgba(0, 127, 255, 0.5);
+}
+.kill-btn.quit:hover {
+  background-color: rgba(0, 127, 255, 0.8);
+}
+.twipsy {
+  font-size: 14px;
+}
