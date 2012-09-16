@@ -1,15 +1,11 @@
 var express = require('express'),
 	app = express();
 
-var	sinaOAuth = require('./lib/sinaOAuth');
-var	sinaOAuth2 = require('./lib/sinaOAuth2');
-
 app.use(express.logger({ format: ':method :url :status' }));
 app.use(express.bodyParser());
 app.use(express.cookieParser());
 app.use(express.session({ secret: 'bang590' }));
 app.use(app.router);
-
 
 app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 app.use('/client',express.static(__dirname + '/client',{ cache:false}));
