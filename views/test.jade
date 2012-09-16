@@ -1,0 +1,11 @@
+html
+	body
+		ul
+			each u in users
+				li
+					dl
+						dt
+						dd
+							=u.userId
+							=u.userNumber
+							=u.salt

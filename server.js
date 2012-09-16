@@ -3,7 +3,7 @@ var express = require('express'),
 	app = express();
 
 
-var SinaWeibo = require('weibo');
+var SinaWeibo = require('node-sina-weibo');
 var https = require('https');
 
 var clientId = '969200639';
@@ -16,6 +16,7 @@ app.use(express.bodyParser());
 app.use(express.cookieParser());
 app.use(express.session({ secret: 'superwolf' }));
 app.use(app.router);
+app.set('view engine', 'jade')
 
 
 app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
@@ -78,8 +79,10 @@ app.get('/comment',function(req,res){
 	});
 });
 
-app.get('/event/:id', function(req, res){
-	res.render('test')
+var data = require('./fake')
+app.get('/test/:id', function(req, res){
+	if (Date.now() > data.) {
+	res.render('test', {users:.users})
 })
 
 var port = process.env.PORT || 8000;
