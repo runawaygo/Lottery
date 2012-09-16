@@ -1,9 +1,9 @@
-== Lottery ==
+## Lottery ##
 
-=== What is Lottery ===
+### What is Lottery ###
 hello.
 
-=== Contributors ===
+### Contributors ###
 runawaygo
 hax
 
